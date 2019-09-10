@@ -1,17 +1,22 @@
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  project: ""
+  clusterName: jx-workshop-boot
+  environmentGitOwner: dcanadillas-kube
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  project: emea-sa-demo
   provider: gke
-  zone: ""
-gitops: true
+  zone: europe-west1-d
 environments:
 - key: dev
 - key: staging
 - key: production
+gitops: true
 ingress:
-  domain: ""
+  domain: 34.76.26.9.nip.io
   externalDNS: false
+  namespaceSubDomain: -jx.
   tls:
     email: ""
     enabled: false
@@ -21,13 +26,13 @@ secretStorage: vault
 storage:
   logs:
     enabled: true
-    url: ""
+    url: gs://jx-workshop-boot
   reports:
     enabled: true
-    url: ""
+    url: gs://jx-workshop-boot
   repository:
     enabled: true
-    url: ""
+    url: gs://jx-workshop-boot
 versionStream:
   ref: 0c3237feef3846fdfc7f17d4f5946017882414e2
   url: https://github.com/cloudbees/cloudbees-jenkins-x-versions.git

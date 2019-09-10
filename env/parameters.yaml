@@ -1,0 +1,10 @@
+adminUser:
+  password: vault:jx-workshop-boot/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  email: dcanadillas@cloudbees.com
+  token: vault:jx-workshop-boot/pipelineUser:token
+  username: dcanadillas-kubecd
+prow:
+  hmacToken: vault:jx-workshop-boot/prow:hmacToken
